@@ -9,6 +9,7 @@
 "Avoid double source
 if !exists('g:JFW_loaded')
     let g:JFW_loaded=1
+    let b:timer_num=-1
 
     function! NextUndo(timer_num)
         normal! u
