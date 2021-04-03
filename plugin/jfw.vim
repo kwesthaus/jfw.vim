@@ -13,6 +13,7 @@ if !exists('g:JFW_loaded')
 
     function! NextUndo(timer_num)
         normal! u
+        echom "Undo executed. Remember to Just Fucking Write"
     endfunc
 
     "Writing has stopped
@@ -46,6 +47,7 @@ if !exists('g:JFW_loaded')
             autocmd!
             autocmd CursorHoldI,CursorHold <buffer> call StartUndoing()
         augroup END
+        echom "Just Fucking Write!"
     endfunc
 
     "Stop requested
@@ -57,6 +59,7 @@ if !exists('g:JFW_loaded')
         augroup JFW
             autocmd!
         augroup END
+        echom "Done fucking writing"
     endfunc
 
     "Just Fucking Write
